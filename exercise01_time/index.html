@@ -1,0 +1,21 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<div id="display"></div>
+		<script>
+			var n;
+			var counter = 0;
+
+			setInterval(function() {
+				if(counter == 60) {
+					counter = 0;
+				}
+				document.body.style.background = "rgb(" + counter*4 + "," + counter*4 + "," + counter*4 + ")";
+				document.getElementById('display').innerHTML = counter;
+				counter++;
+				// manipuate body background
+			}, 1000/10);
+		</script>
+	</body>
+</html>
